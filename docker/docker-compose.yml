@@ -1,0 +1,21 @@
+version: '3'
+services:
+  selenium:
+    image: selenium/standalone-chrome:4
+    container_name: selenium
+    ports: 
+      - "4444:4444"
+    # volumes:
+    #   - /dev/shm:/dev/shm
+    shm_size: "2g"
+  app:
+    build:
+      context: .
+      dockerfile: app_Dockerfile
+    volumes:
+      - ../app:/opt/app
+    # entrypoint: /opt/app/start.sh
+    tty: true
+    depends_on:
+      selenium:
+        condition: service_started

@@ -2,12 +2,17 @@
 
 SeleniumでWebアクセスを自動化する。
 
-## Chrome起動
+## Selenium Server起動
 
 ``` sh
-docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:3.141.59-xenon
+docker-compose -f docker/docker-compose.yml up -d
 ```
 
+## 実行
+
+``` bash 
+docker-compose -f docker/docker-compose.yml exec app /opt/app/start.sh ${pythonファイル名}
+```
 
 ## 参考
 
