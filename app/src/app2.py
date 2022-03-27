@@ -8,8 +8,7 @@ options.add_argument('--headless')
 # x. ブラウザの新規ウィンドウを開く
 print('connectiong to remote browser...')
 driver = webdriver.Remote(
-    command_executor='http://localhost:4444/wd/hub',
-    desired_capabilities=options.to_capabilities(),
+    command_executor='http://selenium:4444/wd/hub',
     options=options,
 )
 

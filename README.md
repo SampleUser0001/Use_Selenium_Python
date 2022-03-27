@@ -17,3 +17,4 @@ docker-compose -f docker/docker-compose.yml exec app /opt/app/start.sh ${python�
 ## 参考
 
 - [10分で理解する Selenium:Qiita](https://qiita.com/Chanmoro/items/9a3c86bb465c1cce738a)
+    - ページの仕様が変更になっているため、2ページ目に移動できない。
